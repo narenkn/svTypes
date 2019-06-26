@@ -147,7 +147,7 @@ namespace svDpiExtn {
       uint16_t l_mod = l % (sizeof(svBitVec32)<<3);
       Value[SV_CANONICAL_SIZE(l+1)-1] &= ~(((svBitVec32)1)<<l_mod);
       Value[SV_CANONICAL_SIZE(l+1)-1] |= (l_rhs&1)<<l_mod;
-      //		printf("l:%d l_mod:%d Value:%x\n", l, l_mod, Value[SV_CANONICAL_SIZE(l+1)-1]);
+      //printf("l:%d l_mod:%d Value:%x\n", l, l_mod, Value[SV_CANONICAL_SIZE(l+1)-1]);
     }
 
     return *this;
