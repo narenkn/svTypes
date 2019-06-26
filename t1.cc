@@ -1,11 +1,12 @@
 
 #include <iostream>
-#include "svTypes.h"
+#include "svTypes.hh"
 
 extern "C"
 void
-t1(pBit b)
+t1(svBitVec32* b)
 {
-	std::cout << "b:" << (uint64_t) b(63,0) << std::endl;
+  svBitVector pb(b);
+  std::cout << "b:" << (uint64_t) pb(63,0) << std::endl;
 }
 
